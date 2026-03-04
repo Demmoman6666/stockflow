@@ -1,4 +1,4 @@
-import { PurchaseOrder } from '../types'
+import { PurchaseOrder } from './types'
 
 const LW_BASE = 'https://api.linnworks.net/api'
 
