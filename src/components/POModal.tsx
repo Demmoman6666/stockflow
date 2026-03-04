@@ -38,7 +38,7 @@ export default function POModal({ open, onClose, products, selectedSKUs, onPOCre
     products.filter(p => selectedSKUs.has(p.sku)).forEach(p => { init[p.sku] = p.replenishQty })
     setQtys(init)
     // Auto-set vendor if all selected are same vendor
-    const vendors = [...new Set(products.filter(p => selectedSKUs.has(p.sku)).map(p => p.vendor))]
+    const vendors = Array.from(new Set(products.filter(p => selectedSKUs.has(p.sku)).map(p => p.vendor))
     if (vendors.length === 1) setVendor(vendors[0])
     else setVendor('')
   }, [open, selectedSKUs])
