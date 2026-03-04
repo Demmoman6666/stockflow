@@ -1,4 +1,4 @@
-import { Product, ShopifyProduct, StoreId } from '../types'
+import { Product, ShopifyProduct, StoreId } from './types'
 
 interface ShopifyConfig {
   domain: string
