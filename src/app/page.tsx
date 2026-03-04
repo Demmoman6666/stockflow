@@ -384,7 +384,7 @@ export default function App() {
               {showVendorForm && (
                 <div style={{ background:'var(--surface)', border:'1px solid var(--border)', borderRadius:12, padding:20, marginBottom:20 }}>
                   <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:14, marginBottom:14 }}>
-{([['Name',vName,setVName,'e.g. My Organics'],['Email',vEmail,setVEmail,'orders@vendor.com']] as [string,string,(v:string)=>void,string][]).map(([label,val,fn,ph]) => (
+                    {([['Name',vName,setVName,'e.g. My Organics'],['Email',vEmail,setVEmail,'orders@vendor.com']] as [string,string,(v:string)=>void,string][]).map(([label,val,fn,ph]) => (
                       <div key={label} style={{ display:'flex', flexDirection:'column', gap:5 }}>
                         <label style={{ fontSize:10, textTransform:'uppercase', letterSpacing:'0.8px', color:'var(--text3)', fontWeight:600 }}>{label}</label>
                         <input value={val} onChange={e => fn(e.target.value)} placeholder={ph} style={inpStyle} />
